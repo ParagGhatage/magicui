@@ -3,6 +3,11 @@ import * as React from "react";
 import { Registry } from "@/registry/schema";
 
 const ui: Registry = {
+  "cool-background": {
+    name: "cool-background",
+    type: "components:magicui",
+    files: ["registry/components/magicui/cool-background.tsx"],
+  },
   "magic-card": {
     name: "magic-card",
     type: "components:magicui",
@@ -252,6 +257,15 @@ const ui: Registry = {
 };
 
 const example: Registry = {
+  "cool-background-demo": {
+    name: "cool-background-demo",
+    type: "components:example",
+    registryDependencies: ["cool-background"],
+    files: ["registry/components/example/cool-background-demo.tsx"],
+    component: React.lazy(
+      () => import("@/registry/components/example/cool-background-demo"),
+    ),
+  },
   "magic-card-demo": {
     name: "magic-card-demo",
     type: "components:example",

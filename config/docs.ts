@@ -101,6 +101,12 @@ export const docsConfig: DocsConfig = {
       title: "Components",
       items: [
         {
+          title: "Cool background",
+          href: `/docs/components/cool-background`,
+          items: [],
+          label: "New",
+      },
+        {
           title: "Marquee",
           href: `/docs/components/marquee`,
           items: [],
